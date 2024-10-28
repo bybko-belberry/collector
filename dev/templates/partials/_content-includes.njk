@@ -1,0 +1,13 @@
+{% macro privacy(url) %}
+
+Я согласен с <a href="{{ url }}" target="_blank" rel="nofollow">правилами</a> обработки моих персональных данных
+
+{% endmacro %}
+
+{% macro decor(position) %}
+
+{% if position === 'right' %}
+	<svg class="c-decor__decor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 240" preserveAspectRatio="none"><path d="M34 0v240H.5L34 0Z"/></svg>
+{% endif %}
+
+{% endmacro %}

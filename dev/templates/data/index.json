@@ -1,0 +1,179 @@
+{
+  "sideMenuArr": [
+    {
+      "title": "Медные решения"
+    },
+    {
+      "title": "Оптические решения"
+    },
+    {
+      "title": "Панели Q-SLOT медь, оптика"
+    },
+    {
+      "title": "Рабочее место"
+    },
+    {
+      "title": "Шкафы и стойки 19”"
+    },
+    {
+      "title": "Блоки распределения питания (PDU)"
+    },
+    {
+      "title": "Организация кабелей"
+    },
+    {
+      "title": "Промышленные СКС"
+    }
+  ],
+  "bannerArr": [
+    {
+      "title": "Оборудованиевысокого качества",
+      "desc": "для построения структурированных кабельных систем",
+      "img": "images/dummy/image 1.jpg",
+      "controls": [
+        {
+          "className": "c-btn c-btn_style_ghost c-btn_color_border_light c-btn_size_md c-btn_accent c-btn_width_md",
+          "text": "Подробнее",
+          "attrs": {
+            "href": "#"
+          }
+        }
+      ],
+      "className": "c-banner_index",
+      "innerClassName": "col-12 col-sm-8 offset-sm-4 col-md-7 offset-md-5 col-lg-8 offset-lg-4 col-xl-6 offset-xl-6"
+    }
+  ],
+  "catalogArr": [
+    {
+      "title": "Продукция",
+      "img": "images/dummy/pexels-brett-sayles-2881233 1.jpg",
+      "sections": [
+        {
+          "title": "Медные решения"
+        },
+        {
+          "title": "Оптические решения"
+        },
+        {
+          "title": "Панели Q-SLOT медь, оптика"
+        },
+        {
+          "title": "Рабочее место"
+        },
+        {
+          "title": "Шкафы и стойки 19”"
+        },
+        {
+          "title": " Блоки распределения питания (PDU)"
+        },
+        {
+          "title": "Организация кабелей"
+        },
+        {
+          "title": "Промышленные СКС"
+        }
+      ]
+    },
+    {
+      "title": "Подбор по&nbsp;параметрам",
+      "img": "images/dummy/pexels-josh-sorenson-1054397 1.jpg"
+    }
+  ],
+  "newsSliderArr": {
+    "id": "news",
+    "values": [
+      {
+        "title": "Новости",
+        "active": true
+      },
+      {
+        "title": "Мероприятия"
+      }
+    ],
+    "code": "news",
+    "newsArr": [
+      {
+        "title": "Итоги конференции Eurolan 360°",
+        "desc": "23 мая в Москве состоялась ежегодная конференция Eurolan Day – 2024.",
+        "data": "11.03.2021",
+        "img": "images/dummy/news_teaser1.jpg"
+      },
+      {
+        "title": "С Днём Победы!",
+        "desc": "Дороге партнёры!От всей души поздравляем вас с Днём Великой Победы!",
+        "data": "11.03.2021",
+        "img": "images/dummy/news_teaser2.jpg"
+      },
+      {
+        "title": "Итоги конференции Eurolan 360°",
+        "desc": "Eurolan Day – это площадка для обсуждения актуальных вопросов отрасли, знакомство",
+        "data": "11.03.2021",
+        "img": "images/dummy/news_teaser3.jpg"
+      }
+    ]
+  },
+  "bannersArr": [
+    {
+      "title": "Оболочка ЦОД – Решения Eurolan для дата-центров",
+      "category": "Webinar",
+      "desc": "Уважаемые партнеры! <br>Приглашаем вас принять участие в вебинаре.",
+      "img": "images/dummy/unsplash_rxpThOwuVgE.jpg",
+      "date": "17 октября  |  12:00",
+      "controls": [
+        {
+          "className": "c-btn c-btn_style_ghost c-btn_color_light c-btn_size_md c-btn_accent c-btn_width_md",
+          "text": "Все мероприятия"
+        }
+      ]
+    },
+    {
+      "title": "Оболочка ЦОД",
+      "category": "Webinar",
+      "desc": "Уважаемые партнеры!",
+      "img": "images/dummy/unsplash_rxpThOwuVgE.jpg",
+      "date": "17 октября  |  12:00",
+      "controls": [
+        {
+          "className": "c-btn c-btn_style_ghost c-btn_color_light c-btn_size_md c-btn_accent c-btn_width_md",
+          "text": "Все мероприятия 2"
+        }
+      ]
+    },
+    {
+      "title": "Оболочка ЦОД Оболочка ЦОД Оболочка ЦОД Оболочка ЦОД Оболочка ЦОД Оболочка ЦОД Оболочка ЦОД",
+      "category": "Webinar",
+      "desc": "Уважаемые партнеры! Уважаемые партнеры! Уважаемые партнеры! Уважаемые партнеры! Уважаемые партнеры! Уважаемые партнеры! Уважаемые партнеры!",
+      "img": "images/dummy/unsplash_rxpThOwuVgE.jpg",
+      "date": "17 октября  |  12:00",
+      "controls": [
+        {
+          "className": "c-btn c-btn_style_ghost c-btn_color_light c-btn_size_md c-btn_accent c-btn_width_md",
+          "text": "Все мероприятия 2"
+        }
+      ]
+    }
+  ],
+  "partnersArr": [
+    {
+      "img": "images/dummy/23941596-VNe9n (4) 3.png"
+    },
+    {
+      "img": "images/dummy/23941596-VNe9n (4) 3 (1).png"
+    },
+    {
+      "img": "images/dummy/23941596-VNe9n (4) 3 (2).png"
+    },
+    {
+      "img": "images/dummy/23941596-VNe9n (4) 3 (3).png"
+    },
+    {
+      "img": "images/dummy/23941596-VNe9n (4) 2.png"
+    },
+    {
+      "img": "images/dummy/23941596-VNe9n (4) 3 (4).png"
+    },
+    {
+      "img": "images/dummy/23941596-VNe9n (4) 3 (5).png"
+    }
+  ]
+}

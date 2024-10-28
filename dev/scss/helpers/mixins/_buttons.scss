@@ -1,0 +1,244 @@
+/****************************************************************************/
+/* BUTTONS */
+/****************************************************************************/
+
+
+/**
+* Default buttons
+*/
+
+@mixin default-buttons ($buttons, $border-width: 1px) {
+
+	.c-btn_style_default {
+		text-decoration: none;
+		border: $border-width solid;
+		font-weight: 500;
+
+		@include g-transition(background-color, border-color);
+	}
+
+	@each $item, $color in $buttons {
+
+		.c-btn_style_default.c-btn_color_#{$item} {
+			background-color: map-get($color, background-color);
+			border-color: map-get($color, border-color);
+			color: map-get($color, color);
+
+			&:hover, &:focus {
+				@if (map-get($color, background-color) != map-get($color, background-color-hover)) {
+					background-color: map-get($color, background-color-hover);
+				}
+
+				@if (map-get($color, border-color) != map-get($color, border-color-hover)) {
+					border-color: map-get($color, border-color-hover);
+				}
+
+				@if (map-get($color, color) != map-get($color, color-hover)) {
+					color: map-get($color, color-hover);
+				}
+			}
+		}
+	}
+}
+
+
+/**
+* Ghost buttons
+*/
+
+@mixin ghost-buttons ($buttons, $border-width: 1px, $percent: 10%) {
+
+	.c-btn_style_ghost {
+		background: none;
+		text-decoration: none;
+		border: $border-width solid currentColor;
+		font-weight: 500;
+
+		@include g-transition(background-color, border-color);
+
+		&.c-btn_disabled {
+			background: none;
+			border-color: currentColor;
+
+			&:hover, &:focus {
+				background: none !important;
+				border-color: currentColor !important;
+			}
+		}
+
+		&.c-btn_accent {
+			position: relative;
+
+			&:before {
+				position: absolute;
+				content: '';
+				top: -5px;
+				right: -5px;
+				bottom: -5px;
+				left: -5px;
+				border: 1px solid currentColor;
+				transform: scale(1);
+
+				@include g-transition(transform);
+			}
+
+			&:hover, &:focus {
+
+				&:before {
+					transform: scale(0);
+				}
+			}
+		}
+	}
+
+	@each $item, $color in $buttons {
+
+		.c-btn_style_ghost.c-btn_color_#{$item} {
+			background-color: map-get($color, background-color);
+			border-color: map-get($color, border-color);
+			color: map-get($color, color);
+
+			&:hover, &:focus,
+			&.c-btn_active,
+			.btn-input:checked + & {
+				background-color: map-get($color, background-color-hover);
+				border-color: map-get($color, border-color-hover);
+				color: map-get($color, color-hover);
+			}
+
+			&.c-btn_disabled {
+
+				&:hover, &:focus {
+					color: map-get($color, color);
+				}
+			}
+
+			&.c-btn_accent {
+
+				&:hover, &:focus {
+
+					&:before {
+						border-color: map-get($color, color);
+					}
+				}
+			}
+
+			&:before {
+				border-color: map-get($color, border-color-before);
+			}
+		}
+	}
+}
+
+
+/**
+* Link buttons
+*/
+
+@mixin link-buttons ($buttons) {
+
+	.c-btn_style_link {
+		border: 0;
+		padding: 0;
+		box-shadow: none;
+		background: none;
+		text-decoration: underline;
+		height: auto;
+		line-height: inherit;
+		min-width: auto;
+		letter-spacing: inherit;
+
+		&:hover, &:focus {
+			text-decoration: none;
+		}
+	}
+
+	@each $item, $color in $buttons {
+
+		.c-btn_style_link.c-btn_color_#{$item} {
+			color: map-get($color, color);
+
+			&:hover, &:focus {
+				@if (map-get($color, color) != map-get($color, color-hover)) {
+					color: map-get($color, color-hover);
+				}
+			}
+		}
+	}
+}
+
+
+/**
+* Decor buttons
+*/
+
+@mixin decor-buttons($buttons) {
+
+	.c-btn_style_decor {
+		background: 0;
+		position: relative;
+		overflow: hidden;
+
+		@include g-transition(background-color, color .45s);
+
+		&:before {
+			position: absolute;
+			content: '';
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 3px;
+			z-index: 1;
+
+			@include g-transition(clip-path);
+		}
+
+		.c-btn__text,
+		.c-btn__icon {
+			z-index: 2;
+		}
+	}
+
+	@each $item, $color in $buttons {
+
+		.c-btn_style_decor.c-btn_color_#{$item} {
+			color: map-get($color, color);
+
+			&:before {
+				@if (map-get($color, background-color)) {
+					background-color: map-get($color, background-color);
+				}
+			}
+
+			&:hover, &:focus {
+				@if (map-get($color, background-color)) {
+					background-color: map-get($color, background-color);
+				}
+
+				@if (map-get($color, color) != map-get($color, color-hover)) {
+					color: map-get($color, color-hover);
+				}
+			}
+		}
+	}
+
+	@supports (clip-path: polygon(9px 0, 12px 0, 3px 100%, 0 100%)) {
+
+		.c-btn_style_decor {
+
+			&:before {
+				clip-path: polygon(9px 0, 12px 0, 3px 100%, 0 100%);
+				width: 100%;
+			}
+
+			&:hover, &:focus {
+				background-color: transparent !important;
+
+				&:before {
+					clip-path: polygon(9px 0, 100% 0, calc(100% - 9px) 100%, 0 100%);
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,70 @@
+/****************************************************************************/
+/* BREAKPOINTS */
+/****************************************************************************/
+
+
+@mixin phone {
+	@media (min-width: #{$phone-width}) and (max-width: #{$tablet-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin to-phone-lg {
+	@media (max-width: #{$phone-lg-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin phone-lg {
+	@media (min-width: #{$phone-width}) and (max-width: #{$phone-lg-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin from-phone-lg {
+	@media (min-width: #{$phone-lg-width}) {
+		@content;
+	}
+}
+
+@mixin to-tablet {
+	@media (max-width: #{$tablet-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin from-tablet {
+	@media (min-width: #{$tablet-width}) {
+		@content;
+	}
+}
+
+@mixin to-desktop {
+	@media (max-width: #{$desktop-width - 1px}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktop-width}) and (max-width: #{$desktop-lg-width}) {
+		@content;
+	}
+}
+
+@mixin from-desktop {
+	@media (min-width: #{$desktop-width}) {
+		@content;
+	}
+}
+
+@mixin from-desktop-lg {
+	@media (min-width: #{$desktop-lg-width}) {
+		@content;
+	}
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru" class="no-js">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>{{ pageTitle or 'Шаблон' }}</title>
+	<meta name="format-detection" content="telephone=no"/>
+
+	{% if site.responsive %}
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% else %}
+		<meta name="viewport" content="width=1200">
+	{% endif %}
+
+	{% include "partials/_app-icons.njk" %}
+
+	<link rel="stylesheet" type="text/css" href="css/vendor.css">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<link rel="stylesheet" type="text/css" href="template_styles.css">
+	<link rel="stylesheet" type="text/css" href="css/components.css">
+
+	<script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	{# runtime нужен для работы бандлов #}
+	<script src="js/runtime.bundle.js"></script>
+	<script src="js/main.bundle.js"></script>
+</head>
+
+<body>
+
+{# Variables array for passing to components #}
+{% set app = {
+    isIndex: true if pageType == 'mainPage' else false,
+	isFullWidth: true if pageWidth == 'fullWidth' else false,
+	isTextPage: true if pageType === 'textPage' else false,
+	is404: true if pageType == '404' else false,
+	path: 'Главная/' + (path if path) + pageTitle,
+	hideH1: true if hideH1 == true else false
+} %}
+
+{% include "partials/_svg-sprite.njk" %}
+
+<div class="c-page">
+	{% include "layouts/_header.njk" %}
+
+	{% set contentClassName = {
+		'content_index pb-0': app.isIndex,
+		'content_detail': not app.isIndex,
+		'content_textpage default-typo': app.isTextPage,
+		'pt-0': noPaddingTop,
+		'pb-0': noPaddingBottom
+	} %}
+
+	<div class="content {{ contentClassName | implode_classname }}">
+		{% if not app.isFullWidth %}
+			<div class="container">
+		{% endif %}
+
+			{% if not hideBreadcrumbs and not app.isIndex %}
+				<div class="{{ 'd-none' if bannerBreacrumbs }}" id="navigation">
+					{{ breadcrumbs.default(app.path) }}
+				</div>
+			{% endif %}
+
+			<div class="content__body">
+				<main class="content__item content__main">
+					{% if app.isIndex %}
+						{% include "partials/_indexblocks.njk" %}
+					{% endif %}
+
+					{% if not app.isIndex and not app.hideH1 %}
+						{% if app.isFullWidth and not hideH1Visually %}
+							<div class="container">
+						{% endif %}
+
+							<h1 class="c-title c-title_lg c-underline {{ 'sr-only' if hideH1Visually }}">{{ pageTitle | safe }}</h1>
+
+						{% if app.isFullWidth and not hideH1Visually %}
+							</div>
+						{% endif %}
+					{% endif %}
+
+					{% block content %}
+						{# content #}
+					{% endblock %}
+				</main>
+			</div>
+			<!-- /.content__body -->
+
+		{% if not app.isFullWidth %}
+			</div>
+			<!-- /.container -->
+		{% endif %}
+	</div>
+	<!-- /.content -->
+
+	<div class="content-outro">
+	</div>
+
+	{% include "layouts/_footer.njk" %}
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+{
+  "site": {
+    "title": "Eurolan",
+    "address": "",
+    "email": "hello@academy.ru",
+    "phones": [
+      "+7 999 999 99 99"
+    ],
+    "responsive": true
+  },
+
+  "headMenuArr": [
+    {
+      "title": "Продукция",
+      "href": "#1"
+    },
+    {
+      "title": "Подбор по параметрам",
+      "href": "#2"
+    }
+  ],
+
+  "mainMenuArr": [
+    {
+      "title": "Где купить?"
+    },
+    {
+      "title": "Партнёрам"
+    },
+    {
+      "title": "Защита в проекте"
+    },
+    {
+      "title": "Гарантия"
+    },
+    {
+      "title": "Пресс-центр"
+    },
+    {
+      "title": "Библиотека"
+    },
+    {
+      "title": "Контакты"
+    }
+  ],
+
+  "bottomMenuArr1": [
+    {
+      "title": "Новости",
+      "accent": true,
+      "href": "#"
+    },
+    {
+      "title": "Лента новостей",
+      "href": "#"
+    },
+    {
+      "title": "Мероприятия",
+      "href": "#"
+    },
+    {
+      "title": "Инсталляции",
+      "href": "#"
+    }
+  ],
+
+  "bottomMenuArr2": [
+    {
+      "title": "Продукция",
+      "accent": true,
+      "href": "#"
+    },
+    {
+      "title": "Каталог Online",
+      "href": "#"
+    },
+    {
+      "title": "Розничный прайс-лист",
+      "href": "#"
+    },
+    {
+      "title": "Библиотека",
+      "href": "#"
+    }
+  ],
+
+  "bottomMenuArr3": [
+    {
+      "title": "Сервисы",
+      "accent": true,
+      "href": "#"
+    },
+    {
+      "title": "Защита в проекте",
+      "href": "#"
+    },
+    {
+      "title": "Авторизация партнеров",
+      "href": "#"
+    },
+    {
+      "title": "Постановка на гарантию",
+      "href": "#"
+    },
+    {
+      "title": "Статьи и материалы",
+      "href": "#"
+    }
+  ],
+
+  "bottomMenuArr4": [
+    {
+      "title": "О компании",
+      "accent": true,
+      "href": "#"
+    },
+    {
+      "title": "Eurolan сегодня",
+      "href": "#"
+    },
+    {
+      "title": "Карьера",
+      "href": "#"
+    }
+  ],
+
+  "bottomMenuArr5": [
+    {
+      "title": "Контакты",
+      "accent": true,
+      "href": "#"
+    },
+    {
+      "title": "Офис",
+      "href": "#"
+    },
+    {
+      "title": "Партнеры",
+      "href": "#"
+    }
+  ],
+  "socialsArr": [
+    {
+      "id": "telegram",
+      "href": "https://t.me/eurolan",
+      "canceler": " svg-ico_no_stroke",
+      "attrs": {
+        "viewBox": "0 0 24 24"
+      }
+    },
+    {
+      "id": "youtube",
+      "href": "https://www.youtube.com/@Eurolan_ConnectIT",
+      "canceler": " svg-ico_no_stroke",
+      "attrs": {
+        "viewBox": "0 0 24 24"
+      }    
+    }
+  ]
+}

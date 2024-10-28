@@ -1,0 +1,77 @@
+@import "functions";
+
+/****************************************************************************/
+/* COLOR PALETTE */
+/****************************************************************************/
+
+/**
+* Basic colors
+*/
+
+$color-text: #000;
+$color-primary-lighter: #fff;
+$color-primary-light: #fff;
+
+/**
+* Validation colors
+*/
+
+
+
+/****************************************************************************/
+/* FONTS */
+/****************************************************************************/
+
+/**
+* Font families
+*/
+
+$font-primary: sans-serif;
+
+/****************************************************************************/
+/* BREAKPOINTS */
+/****************************************************************************/
+
+$bp-xs: 320px;
+$bp-sm: 640px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1366px;
+$bp-xxl: 1440px;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: $bp-sm,
+  md: $bp-md,
+  lg: $bp-lg,
+  xl: $bp-xl,
+  xxl: $bp-xxl
+);
+
+
+/****************************************************************************/
+/* UI */
+/****************************************************************************/
+
+$global-gutter: 15px;
+$global-border-radius: 15px;
+$spacers: (
+	1: 10px,
+	2: 20px,
+	3: 30px,
+	4: 40px,
+	5: 50px,
+);
+
+$container-sm-width: $bp-sm - ((30 - $global-gutter) * 2);
+$container-md-width: $bp-md - ((30 - $global-gutter) * 2);
+$container-lg-width: $bp-lg - ((50 - $global-gutter) * 2);
+$container-xl-width: $bp-xl - ((40 - $global-gutter) * 2);
+$container-xl-width: $bp-xxl - ((40 - $global-gutter) * 2);
+
+$container-max-widths: (
+	sm: $container-sm-width,
+	md: $container-md-width,
+	lg: $container-lg-width,
+	xl: $container-xl-width,
+);
